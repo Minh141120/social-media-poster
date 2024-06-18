@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'minhitptit' // Use the ID you set when adding credentials
+        DOCKER_CREDENTIALS_ID = '9b8dd850-5abc-480c-a34d-6f0849f957ae' // Use the ID you set when adding credentials
         DOCKER_IMAGE = 'minhiptit/social_network_ver2'
     }
 
