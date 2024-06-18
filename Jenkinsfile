@@ -18,20 +18,6 @@ pipeline {
                 git url: 'https://github.com/Minh141120/social-media-poster.git', branch: 'main'
             }
         }
-        stage('Start Docker') {
-            steps {
-                script {
-                    sh '''
-                        if (! systemctl is-active --quiet docker); then
-                          echo "Docker is not running, starting Docker..."
-                          sudo systemctl start docker
-                        else
-                          echo "Docker is already running."
-                        fi
-                    '''
-                }
-            }
-        }
         stage('Build and Push Docker Images') {
             steps {
                 script {
