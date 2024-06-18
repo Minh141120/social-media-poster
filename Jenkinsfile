@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS_ID = 'minhitptit' // ID for Docker Hub credentials in Jenkins
-        DOCKER_IMAGE = 'minhitptit/social_network_ver2'
+        DOCKER_CREDENTIALS_ID = 'minhitptit' // Use the ID you set when adding credentials
+        DOCKER_IMAGE = 'minhiptit/social_network_ver2'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Checkout code from Git repository
-                git url: 'https://github.com/your-repo/social_network_ver2.git', branch: 'main'
+                // Correct the Git repository URL
+                git url: 'https://github.com/Minh141120/social-media-poster.git', branch: 'main'
             }
         }
         stage('Build and Push Docker Images') {
