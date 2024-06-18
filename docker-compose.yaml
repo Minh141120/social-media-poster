@@ -5,7 +5,7 @@ services:
     build:
       context: ./snv2_backend/AuthService
     ports:
-      - "3001:3001"
+      - "3007:3007"
     environment:
       - NODE_ENV=development
     networks:
