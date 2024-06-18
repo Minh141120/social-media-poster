@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_CREDENTIALS_ID = '10e92a92-58dc-4c78-89ed-4492837de586' // Use the ID you set when adding credentials
-        DOCKER_IMAGE = 'minhiptit/social_network_ver2'
+        DOCKER_CREDENTIALS_ID = '10e92a92-58dc-4c78-89ed-4492837de586' // Ensure this matches the ID you set in Jenkins
+        DOCKER_IMAGE = 'minhitptit/social_network_ver2'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Correct the Git repository URL
+                // Checkout code from Git repository
                 git url: 'https://github.com/Minh141120/social-media-poster.git', branch: 'main'
             }
         }
