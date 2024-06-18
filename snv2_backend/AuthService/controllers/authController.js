@@ -9,7 +9,7 @@ const login = async (req, res) => {
   const { username, password } = req.body;
   // const user2 = await User.findOne({ username });
   // console.log("user2 from /api/auth", user2)
-  const user = await axios.get(`http://userservice:3004/api/users/username/${username}`).then(res => res.data)
+  const user = await axios.get(`http://userservice:3009/api/users/username/${username}`).then(res => res.data)
   console.log("user from /api/user",user)
   const passwordCorrect = user === null ? false : await bcrypt.compare(password, user.passwordHash);
   

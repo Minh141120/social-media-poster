@@ -35,7 +35,7 @@ services:
     build:
       context: ./snv2_backend/UserService
     ports:
-      - "3004:3004"
+      - "3009:3009"
     environment:
       - NODE_ENV=development
     networks:
