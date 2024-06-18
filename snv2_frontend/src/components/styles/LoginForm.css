@@ -1,0 +1,16 @@
+/* LoginForm.css */
+.login-form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-form h2 {
+    text-align: center;
+}
+
+.login-form-button {
+    width: 100%;
+}

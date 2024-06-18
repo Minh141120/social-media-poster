@@ -1,0 +1,96 @@
+.fixed-table {
+    width: 100%;
+    table-layout: fixed;
+}
+.fixed-table td {
+    word-wrap: break-word; /* Cho phép tự động xuống dòng khi cần thiết */
+    overflow-wrap: break-word; /* Tương tự như word-wrap cho các trình duyệt cũ */
+}
+.custom-width-10 {
+    width: 10%;
+}
+.custom-width-20 {
+    width: 20%;
+}
+.custom-width-30 {
+    width: 30%;
+}
+.custom-width-70 {
+    width: 70%;
+}
+.custom-width-50 {
+    width:50%;
+}
+.custom-width-25 {
+    width: 25%;
+}
+.custom-width-15 {
+    width: 15%;
+}
+.center-content {
+    text-align: center;
+}
+
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.row.content {height: 450px}
+
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+
+
+.scroll-part {
+    max-height: 300px;
+    overflow-y: auto;
+} 
+
+
+.table-container{
+    width: 100%;
+}
+
+
+.edit-form-overlay {
+    position: fixed;
+    top: 50%; /* Đặt phần trên của form ở giữa màn hình theo chiều dọc */
+    left: 50%; /* Đặt phần trái của form ở giữa màn hình theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển form lên trên và sang trái để căn giữa */
+    
+    width: 500px; /* Điều chỉnh độ rộng của form theo nhu cầu */
+    height: fit-content;
+    
+    background-color: white; /* Màu nền của form */
+    padding: 20px; /* Khoảng cách giữa nội dung và viền của form */
+    border-radius: 8px; /* Độ cong của góc form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ cho form */
+    z-index: 999; /* Đảm bảo form nằm trên tất cả các phần tử khác */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt */
+    z-index: 998; /* Đảm bảo overlay nằm phía sau form */
+}
+
+/* styles.css */
+
+
+

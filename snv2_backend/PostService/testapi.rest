@@ -1,0 +1,12 @@
+###
+GET http://localhost:3002/api/posts
+###
+GET http://localhost:3002/api/posts
+###
+POST http://localhost:3002/api/posts
+Content-Type: application/json
+
+{
+    "title" : "title2",
+    "content" : "content2"
+}

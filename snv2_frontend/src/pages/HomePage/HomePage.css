@@ -1,0 +1,13 @@
+.about-us-section {
+    background-image: url('path-to-your-social-network-background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-section h1 {
+    color: white; /* Or any color that contrasts well with your background */
+}

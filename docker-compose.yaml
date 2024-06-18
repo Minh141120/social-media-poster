@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  authservice:
+    build:
+      context: ./snv2_backend/AuthService
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - default
+
+  postservice:
+    build:
+      context: ./snv2_backend/PostService
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - default
+
+  socialservice:
+    build:
+      context: ./snv2_backend/SocialService
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - default
+
+  userservice:
+    build:
+      context: ./snv2_backend/UserService
+    ports:
+      - "3004:3004"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - default
+
+  frontend:
+    build:
+      context: ./snv2_frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    depends_on:
+      - authservice
+      - postservice
+      - socialservice
+      - userservice
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge

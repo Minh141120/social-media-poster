@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "password": "password123",
+      "name": "John Doe"
+    },
+    {
+      "id": "2",
+      "username": "jane_smith",
+      "password": "password456",
+      "name": "Jane Smith"
+    },
+    {
+      "id": "3",
+      "username": "alice_jones",
+      "password": "password789",
+      "name": "Alice Jones"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Welcome to My Blog",
+      "content": "This is the first post on my blog. Stay tuned for more updates!"
+    },
+    {
+      "id": "2",
+      "title": "Exploring the City",
+      "content": "Today, I went out to explore the city and discovered some amazing places."
+    },
+    {
+      "id": "3",
+      "title": "Tech Trends in 2024",
+      "content": "In this post, we will discuss the top tech trends to look out for in 2024."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+###
+GET http://localhost:3004/api/users
+###
+GET http://localhost:3004/api/users
+###
+GET http://localhost:3004/api/users/username/nguyen
+###
+POST http://localhost:3004/api/users
+Content-Type: application/json
+
+{
+    "username" : "khoi",
+    "name" : "Khoi Nguyen",
+    "password" : "123456"
+}
