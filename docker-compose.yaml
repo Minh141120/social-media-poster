@@ -15,7 +15,7 @@ services:
     build:
       context: ./snv2_backend/PostService
     ports:
-      - "3002:3002"
+      - "3005:3005"
     environment:
       - NODE_ENV=development
     networks:

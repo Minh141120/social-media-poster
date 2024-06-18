@@ -1,7 +1,7 @@
 import axios from "axios"
 
 // const baseUrl = 'http://localhost:3001/posts' //! test json server
-const baseUrl = 'http://localhost:3002/api/posts'
+const baseUrl = 'http://localhost:3005/api/posts'
 
 const getAll = async () => {
     const res = await axios.get(baseUrl)

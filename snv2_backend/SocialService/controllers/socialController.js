@@ -42,7 +42,7 @@ const uploadPosts = async (req, res) => {
 }
 
 const testServiceConnnection = async (req, res) =>{
-  const posts = await axios.get('http://postservice:3002/api/posts').then(res => res.data)
+  const posts = await axios.get('http://postservice:3005/api/posts').then(res => res.data)
   res.json(posts)
   // console.log(posts)
 }
