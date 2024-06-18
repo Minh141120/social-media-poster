@@ -55,15 +55,6 @@ pipeline {
                           sudo kill $(lsof -t -i:5173)
                         fi
                     '''
-                    sh '''
-                        echo "Flushing IP tables..."
-                        sudo iptables --flush
-                        sudo iptables -t nat --flush
-                        sudo iptables -t mangle --flush
-                        sudo iptables -X
-                        sudo iptables -t nat -X
-                        sudo iptables -t mangle -X
-                    '''
                     sh 'sudo docker-compose up -d'
                 }
             }
