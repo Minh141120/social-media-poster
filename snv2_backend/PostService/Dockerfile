@@ -17,7 +17,7 @@ RUN npm rebuild bcrypt --build-from-source
 COPY . .
 
 # Expose the port the app runs on
-EXPOSE 3002
+EXPOSE 3005
 
 # Define the command to run the application
 CMD ["npm", "run", "dev"]

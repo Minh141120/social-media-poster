@@ -25,7 +25,7 @@ services:
     build:
       context: ./snv2_backend/SocialService
     ports:
-      - "3003:3003"
+      - "3006:3006"
     environment:
       - NODE_ENV=development
     networks:
