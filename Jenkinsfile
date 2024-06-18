@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    options {
+        timeout(time: 60, unit: 'MINUTES') // Set a higher timeout limit
+    }
 
     environment {
         DOCKER_CREDENTIALS_ID = '10e92a92-58dc-4c78-89ed-4492837de586' // Ensure this matches the ID you set in Jenkins
@@ -51,7 +55,7 @@ pipeline {
             steps {
                 script {
                     // Example deployment steps, can be customized as per your deployment strategy
-                    sh 'docker-compose down'
+                    sh 'docker-compose down || true' // Ignore errors if containers are not running
                     sh 'docker-compose up -d'
                 }
             }
