@@ -4,6 +4,8 @@ pipeline {
     environment {
         DOCKER_CREDENTIALS_ID = '10e92a92-58dc-4c78-89ed-4492837de586' // Ensure this matches the ID you set in Jenkins
         DOCKER_IMAGE = 'minhitptit/social_network_ver2'
+        DOCKER_CLIENT_TIMEOUT = '300' // Increase Docker client timeout
+        COMPOSE_HTTP_TIMEOUT = '300'  // Increase HTTP timeout for Docker Compose
     }
 
     stages {
