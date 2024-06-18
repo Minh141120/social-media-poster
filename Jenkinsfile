@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     options {
         timeout(time: 60, unit: 'MINUTES') // Set a higher timeout limit
     }
@@ -56,6 +56,13 @@ pipeline {
                 script {
                     // Example deployment steps, can be customized as per your deployment strategy
                     sh 'docker-compose down || true' // Ignore errors if containers are not running
+                    sh '''
+                        # Ensure the port is not in use
+                        if lsof -i:5173; then
+                          echo "Port 5173 is in use, killing the process..."
+                          kill $(lsof -t -i:5173)
+                        fi
+                    '''
                     sh 'docker-compose up -d'
                 }
             }
